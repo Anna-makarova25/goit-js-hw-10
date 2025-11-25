@@ -29,6 +29,7 @@ formElement.addEventListener('submit', event => {
         message: `Fulfilled promise in ${delay}ms`,
         position: 'topRight',
       });
+      form.elements.delay.value = '';
     })
     .catch(delay => {
       iziToast.error({
@@ -36,5 +37,6 @@ formElement.addEventListener('submit', event => {
         message: `Rejected promise in ${delay}ms`,
         position: 'topRight',
       });
+      form.elements.delay.value = '';
     });
 });
